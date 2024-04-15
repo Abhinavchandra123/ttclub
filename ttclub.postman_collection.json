@@ -1,0 +1,1831 @@
+{
+	"info": {
+		"_postman_id": "5fed8b8e-4ab9-4bc4-a0e0-da51063e45a2",
+		"name": "ttclub",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17114448"
+	},
+	"item": [
+		{
+			"name": "login",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "TCM0001",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "40Yw2Ks26W",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}api/auth/login/",
+							"host": [
+								"{{server}}api"
+							],
+							"path": [
+								"auth",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot password request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "quriousinnovations@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}api/auth/check-email/",
+							"host": [
+								"{{server}}api"
+							],
+							"path": [
+								"auth",
+								"check-email",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "member_id",
+									"value": "TCM0009",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Ram31280024",
+									"type": "text"
+								},
+								{
+									"key": "confirm_password",
+									"value": "Ram31280024",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}//api/auth/reset-password/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"",
+								"api",
+								"auth",
+								"reset-password",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "home",
+			"item": [
+				{
+					"name": "Services",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}api/home/services/",
+							"host": [
+								"{{server}}api"
+							],
+							"path": [
+								"home",
+								"services",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hot Deals",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}api/home/hot-deals/",
+							"host": [
+								"{{server}}api"
+							],
+							"path": [
+								"home",
+								"hot-deals",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deals",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}//api/home/deals/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"",
+								"api",
+								"home",
+								"deals",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add enquiry",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "other_service_name",
+									"value": "test api 2",
+									"type": "text"
+								},
+								{
+									"key": "comment",
+									"value": "test api comment",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}//api/home/create-enquiry/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"",
+								"api",
+								"home",
+								"create-enquiry",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Request and Bokkings",
+			"item": [
+				{
+					"name": "Upcomming bookings",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}api/request-and-bookings/upcomming-bookings/",
+							"host": [
+								"{{server}}api"
+							],
+							"path": [
+								"request-and-bookings",
+								"upcomming-bookings",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Past bookings",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}api/request-and-bookings/past-bookings/",
+							"host": [
+								"{{server}}api"
+							],
+							"path": [
+								"request-and-bookings",
+								"past-bookings",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "my requests",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}api/request-and-bookings/my-requests/",
+							"host": [
+								"{{server}}api"
+							],
+							"path": [
+								"request-and-bookings",
+								"my-requests",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "request status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}//api/request-and-bookings/request-status/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"",
+								"api",
+								"request-and-bookings",
+								"request-status",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "flight trips",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}api/request-and-bookings/flight-trips/",
+							"host": [
+								"{{server}}api"
+							],
+							"path": [
+								"request-and-bookings",
+								"flight-trips",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "flight class",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{server_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}//api/request-and-bookings/flight-class/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"",
+								"api",
+								"request-and-bookings",
+								"flight-class",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "vehicle types",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}api/request-and-bookings/vehicle-types/",
+							"host": [
+								"{{server}}api"
+							],
+							"path": [
+								"request-and-bookings",
+								"vehicle-types",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insurance types",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}//api/request-and-bookings/insurance-types/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"",
+								"api",
+								"request-and-bookings",
+								"insurance-types",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "abroad contries",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}//api/request-and-bookings/abroad-countries/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"",
+								"api",
+								"request-and-bookings",
+								"abroad-countries",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "airports",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}api/request-and-bookings/airports/",
+							"host": [
+								"{{server}}api"
+							],
+							"path": [
+								"request-and-bookings",
+								"airports",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "flight request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "flight_from_name",
+									"value": "36d92419-5810-4a51-b4e7-c71fb1ad016b",
+									"type": "text"
+								},
+								{
+									"key": "flight_to_name",
+									"value": "d75c5621-a84d-49ed-8e25-4efe89294364",
+									"type": "text"
+								},
+								{
+									"key": "preferred_flight",
+									"value": "indigo",
+									"type": "text"
+								},
+								{
+									"key": "preferred_departure_date",
+									"value": "2024-12-10",
+									"description": "YYYY-MM-DD",
+									"type": "text"
+								},
+								{
+									"key": "preferred_class",
+									"value": "00000000-0000-0000-0000-000000000001",
+									"type": "text"
+								},
+								{
+									"key": "number_of_adults",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "number_of_childrens",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "number_of_infants",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "return_date",
+									"value": "2010-03-02",
+									"description": "YYYY-MM-DD",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "trip_type",
+									"value": "63bff78d-567e-47d8-8451-6f0f51e0a8f7",
+									"type": "text"
+								},
+								{
+									"key": "comment",
+									"value": "delhi flight new",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}api/request-and-bookings/flight-request/",
+							"host": [
+								"{{server}}api"
+							],
+							"path": [
+								"request-and-bookings",
+								"flight-request",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "taxi request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "taxi_from_name",
+									"value": "kannur",
+									"type": "text"
+								},
+								{
+									"key": "taxi_to_name",
+									"value": "trivandrum",
+									"type": "text"
+								},
+								{
+									"key": "taxi_pickup_date",
+									"value": "2024-12-23",
+									"type": "text"
+								},
+								{
+									"key": "taxi_pickup_time",
+									"value": "10:30 AM",
+									"type": "text"
+								},
+								{
+									"key": "taxi_brand",
+									"value": "swift",
+									"type": "text"
+								},
+								{
+									"key": "taxi_service_name",
+									"value": "aKD",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "taxi_car_type",
+									"value": "00000000-0000-0000-0000-000000000002",
+									"type": "text"
+								},
+								{
+									"key": "comment",
+									"value": "test taxi vc",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}api/request-and-bookings/taxi-request/",
+							"host": [
+								"{{server}}api"
+							],
+							"path": [
+								"request-and-bookings",
+								"taxi-request",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tempo request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "tempo_from_name",
+									"value": "kollam",
+									"type": "text"
+								},
+								{
+									"key": "tempo_to_name",
+									"value": "alappuzha",
+									"type": "text"
+								},
+								{
+									"key": "tempo_pickup_date",
+									"value": "2023-12-23",
+									"type": "text"
+								},
+								{
+									"key": "tempo_pickup_time",
+									"value": "10:30",
+									"type": "text"
+								},
+								{
+									"key": "tempo_service_name",
+									"value": "aKD",
+									"type": "text"
+								},
+								{
+									"key": "tempo_car_type",
+									"value": "00000000-0000-0000-0000-000000000004",
+									"type": "text"
+								},
+								{
+									"key": "comment",
+									"value": "test tempo",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}//api/request-and-bookings/tempo-request/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"",
+								"api",
+								"request-and-bookings",
+								"tempo-request",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "bus request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "bus_from_name",
+									"value": "kollam",
+									"type": "text"
+								},
+								{
+									"key": "bus_to_name",
+									"value": "alappuzha",
+									"type": "text"
+								},
+								{
+									"key": "bus_pickup_date",
+									"value": "2023-12-23",
+									"type": "text"
+								},
+								{
+									"key": "bus_pickup_time",
+									"value": "10:30",
+									"type": "text"
+								},
+								{
+									"key": "bus_service_name",
+									"value": "aKD",
+									"type": "text"
+								},
+								{
+									"key": "bus_type",
+									"value": "00000000-0000-0000-0000-000000000002",
+									"type": "text"
+								},
+								{
+									"key": "comment",
+									"value": "test taxi",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}//api/request-and-bookings/bus-request/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"",
+								"api",
+								"request-and-bookings",
+								"bus-request",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "train request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "train_from_name",
+									"value": "kannur",
+									"type": "text"
+								},
+								{
+									"key": "train_to_name",
+									"value": "kozhikode",
+									"type": "text"
+								},
+								{
+									"key": "train_prefered_train",
+									"value": "expess",
+									"type": "text"
+								},
+								{
+									"key": "train_prefered_travel_date",
+									"value": "2023-02-20",
+									"description": "YYYY-MM-DD",
+									"type": "text"
+								},
+								{
+									"key": "train_prefered_class",
+									"value": "general",
+									"type": "text"
+								},
+								{
+									"key": "train_number_of_adult",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "train_number_of_children",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "train_return_trip",
+									"value": "",
+									"description": "true or false",
+									"type": "text"
+								},
+								{
+									"key": "comment",
+									"value": "test comment",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}//api/request-and-bookings/train-request/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"",
+								"api",
+								"request-and-bookings",
+								"train-request",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "hotels request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "hotel_city",
+									"value": "kannur",
+									"type": "text"
+								},
+								{
+									"key": "hotel_prefered_hotel",
+									"value": "taj",
+									"type": "text"
+								},
+								{
+									"key": "hotel_check_in_date",
+									"value": "2023-02-20",
+									"type": "text"
+								},
+								{
+									"key": "hotel_check_out_date",
+									"value": "2023-02-20",
+									"description": "YYYY-MM-DD",
+									"type": "text"
+								},
+								{
+									"key": "hotel_number_of_rooms",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "hotel_number_of_adult",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "hotel_number_of_children",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "number_of_infants",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "comment",
+									"value": "test comment",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}//api/request-and-bookings/hotel-request/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"",
+								"api",
+								"request-and-bookings",
+								"hotel-request",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "holiday request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "holidays_city",
+									"value": "kolkata",
+									"type": "text"
+								},
+								{
+									"key": "holidays_travel_date",
+									"value": "2024-09-27",
+									"description": "YYYY-MM-DD",
+									"type": "text"
+								},
+								{
+									"key": "holidays_total_days",
+									"value": "7",
+									"type": "text"
+								},
+								{
+									"key": "holidays_number_of_adult",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "holidays_number_of_children",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "comment",
+									"value": "test comment",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}api/request-and-bookings/holiday-request/",
+							"host": [
+								"{{server}}api"
+							],
+							"path": [
+								"request-and-bookings",
+								"holiday-request",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insurance request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "insurance",
+									"value": "00000000-0000-0000-0000-000000000001,00000000-0000-0000-0000-000000000004",
+									"description": "send insurence type id, suprate using coma",
+									"type": "text"
+								},
+								{
+									"key": "comment",
+									"value": "testt",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}//api/request-and-bookings/insurance-request/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"",
+								"api",
+								"request-and-bookings",
+								"insurance-request",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "passport request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "passport_country",
+									"value": "SA",
+									"type": "text"
+								},
+								{
+									"key": "comment",
+									"value": "testt",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}api/request-and-bookings/passport-request/",
+							"host": [
+								"{{server}}api"
+							],
+							"path": [
+								"request-and-bookings",
+								"passport-request",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "abroad request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "comment",
+									"value": "testt",
+									"type": "text"
+								},
+								{
+									"key": "abroud_university",
+									"value": "kannur",
+									"type": "text"
+								},
+								{
+									"key": "abroud_course",
+									"value": "MBA",
+									"type": "text"
+								},
+								{
+									"key": "abroud_country",
+									"value": "00000000-0000-0000-0000-000000000001",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}//api/request-and-bookings/abroad-request/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"",
+								"api",
+								"request-and-bookings",
+								"abroad-request",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "visa request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "comment",
+									"value": "testt",
+									"type": "text"
+								},
+								{
+									"key": "visa_country",
+									"value": "Germany",
+									"type": "text"
+								},
+								{
+									"key": "visa_type",
+									"value": "STUDENT",
+									"type": "text"
+								},
+								{
+									"key": "abroud_country",
+									"value": "00000000-0000-0000-0000-000000000001",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}api/request-and-bookings/visa-request/",
+							"host": [
+								"{{server}}api"
+							],
+							"path": [
+								"request-and-bookings",
+								"visa-request",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "germany",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "student",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "deals",
+			"item": [
+				{
+					"name": "deals list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}api/deals/deals-list/",
+							"host": [
+								"{{server}}api"
+							],
+							"path": [
+								"deals",
+								"deals-list",
+								""
+							],
+							"query": [
+								{
+									"key": "deal_type",
+									"value": "00000000-0000-0000-0000-000000000001",
+									"description": "service pk or pass 10 for hot deals",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deals details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}api/deals/deals-details/de346d3d-bfe0-4d37-974b-cbe4b0be4460/",
+							"host": [
+								"{{server}}api"
+							],
+							"path": [
+								"deals",
+								"deals-details",
+								"de346d3d-bfe0-4d37-974b-cbe4b0be4460",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "interest deal",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}//api/deals/interest-deal/0bb89ea4-ae1a-4b5a-9aeb-477c99a95ac0/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"",
+								"api",
+								"deals",
+								"interest-deal",
+								"0bb89ea4-ae1a-4b5a-9aeb-477c99a95ac0",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deal reviews",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}api/deals/deal-reviews/b0047017-1f3e-4ce8-8277-a4be8e804c69/",
+							"host": [
+								"{{server}}api"
+							],
+							"path": [
+								"deals",
+								"deal-reviews",
+								"b0047017-1f3e-4ce8-8277-a4be8e804c69",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add deal review",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "review",
+									"value": "test review\n",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}//api/deals/add-review/0bb89ea4-ae1a-4b5a-9aeb-477c99a95ac0/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"",
+								"api",
+								"deals",
+								"add-review",
+								"0bb89ea4-ae1a-4b5a-9aeb-477c99a95ac0",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "profile",
+			"item": [
+				{
+					"name": "profile password",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "password",
+									"value": "Ram31280024",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}//api/profile/profile-password/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"",
+								"api",
+								"profile",
+								"profile-password",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}api/profile/profile/",
+							"host": [
+								"{{server}}api"
+							],
+							"path": [
+								"profile",
+								"profile",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "member documents",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}api/profile/member-documents/",
+							"host": [
+								"{{server}}api"
+							],
+							"path": [
+								"profile",
+								"member-documents",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "download member document",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}//api/profile/download-member-document/247f77c3-297e-4db9-aa97-36288768a813/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"",
+								"api",
+								"profile",
+								"download-member-document",
+								"247f77c3-297e-4db9-aa97-36288768a813",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "member family",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}api/profile/member-family/",
+							"host": [
+								"{{server}}api"
+							],
+							"path": [
+								"profile",
+								"member-family",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "member profile settings",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}api/profile/member-profile-settings/",
+							"host": [
+								"{{server}}api"
+							],
+							"path": [
+								"profile",
+								"member-profile-settings",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "member profile settings update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email_notification",
+									"value": "false",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}api/profile/update-member-settings/",
+							"host": [
+								"{{server}}api"
+							],
+							"path": [
+								"profile",
+								"update-member-settings",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change member password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "password",
+									"value": "Ram31280024",
+									"type": "text"
+								},
+								{
+									"key": "confirm_password",
+									"value": "Ram31280024",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}//api/profile/change-member-password/",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"",
+								"api",
+								"profile",
+								"change-member-password",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Logout",
+			"item": [
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{server}}api/auth/logout/",
+							"host": [
+								"{{server}}api"
+							],
+							"path": [
+								"auth",
+								"logout",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "local_host",
+			"value": "http://127.0.0.1:8000/",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEyODExMTc1LCJpYXQiOjE2OTQ2NjcxNzUsImp0aSI6IjE5ZTIxZGFkZGIwNzQ1ZmQ4NjY2ZDAzZWYwOTM4ZWM5IiwidXNlcl9pZCI6Mn0.IHDBxWOrmZCsixFGlIWkX9dE8UbPphs2lGsfe2UIchs",
+			"type": "string"
+		},
+		{
+			"key": "server",
+			"value": "http://ttclub.in/",
+			"type": "string"
+		},
+		{
+			"key": "server_token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEyOTI5MjkzLCJpYXQiOjE2OTQ3ODUyOTMsImp0aSI6ImFlODE1NjA3NWZmMjRlZjJiYTZlNDJiYTBiNGI1M2Y1IiwidXNlcl9pZCI6MTd9.CNLlskheDz9JV9Qq9CaA3Y_VbbC7ZTM9ReKRIwLyfOw",
+			"type": "string"
+		}
+	]
+}
